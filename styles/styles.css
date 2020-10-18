@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@100;200;300;400;600;700&family=Roboto:wght@100;300;400&display=swap');
+
+
+
+:root {
+    /* Color Setting */
+  --color-orange-main: #f57c00;
+  --color-purple-main: #9c27b0;
+  --color-purple-dark: #6a0080;
+  --color-gray-main: #797b7c;
+  --color-gray-light: #eceff1;
+  --color-gray-dark: #607d8b;
+  --color-gray-darker: rgb(54, 50, 54);
+  --color-white: #ffffff;
+    /* Font Size Setting */
+  --fontsize-huge: 2rem;
+  --fontsize-small: 18px;
+
+    /* Border Radius */
+  --border-raidus-big: 20px;
+  --border-raidus-medium: 10px;
+  --border-raidus-small: 6px;
+  --border-radius-xs: 3px;
+  
+  --duration-default: 350ms;
+
+    /* Box Shadows */
+  --box-shadow-small: -3px -3px 3px 0 #ffffff, 3px 3px 3px 0 #aeaec0;    
+  --box-shadow-big: -10px -10px 30px 0 #ffffff, 10px 10px 30px 0 #aeaec0;    
+
+    
+
+}
+* {
+    box-sizing: border-box;
+    color: var(--color-gray-main);
+}
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+button {
+    width: 150px;
+    height: 45px;
+    margin: 5px 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: white;
+    outline: none;
+    border-radius: var(--border-raidus-medium);
+    border: 0;
+    box-shadow: inset -3px -4px 4px rgba(0,0,0,.2);
+}
+.footer {
+    color: var(--color-gray-dark);
+    position: fixed;
+    bottom: 5px;
+    right: 40vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+/* Font & Typo Settings */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* ============ NAVBAR ============ */
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100vw;
+    padding: 0 40px;
+    background: transparent;
+    z-index: 5;
+}
+
+.navbar__logo {
+    height: 38px;
+    width: 170px;
+}
+
+.navbar__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar__menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar__item {
+    margin: 0 20px;
+    border: none;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.9rem;
+    background-color: var(--color-gray-light);
+    box-shadow: -3px -3px 3px 0 #ffffff, 3px 3px 3px 0 #aeaec0;    
+}
+.navbar__item a i {
+    text-decoration: none;
+    color: var(--color-gray-darker);
+}
+
+.navbar__hamburger {
+    display: none;
+}
+
+/* ============ HOME SECTION ============ */
+
+.section__home {
+    background-color: var(--color-gray-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__product__list {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.home__product {
+    margin: auto;
+    width: 700px;
+    padding: 15px 30px;
+    background-color: var(--color-gray-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--border-raidus-big);
+    box-shadow: var(--box-shadow-big);
+}
+
+
+.product__img {
+    margin: auto;
+    height: 450px;
+    width: 450px;
+    border-radius: var(--border-raidus-medium);
+}
+
+.product__title {
+    text-transform: uppercase;
+}
+
+.product__price, 
+.product__shipping {
+    width: 100%;
+    margin-left: 30%;
+    margin-bottom: 5px;
+    font-family: 'Roboto';
+    font-size: var(--fontsize-small);
+}
+.product__btns {
+    margin-top: 10px;
+}
+
+.btn__buy {
+    background-color: var(--color-purple-main);
+}
+
+.btn__see {
+    background-color: var(--color-orange-main);
+}
